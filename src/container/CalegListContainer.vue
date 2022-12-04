@@ -19,6 +19,7 @@ const listCalegData = ref(listCaleg.data);
         :name="caleg.name"
         :location="caleg.community.name"
         :partai-name="caleg.party_name"
+        :path="caleg.path"
       />
     </div>
   </div>

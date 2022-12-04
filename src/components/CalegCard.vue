@@ -1,14 +1,18 @@
 <script setup>
+import { RouterLink } from "vue-router";
+
 defineProps({
   imageURL: String,
   name: String,
   partaiName: String,
   location: String,
+  path: String,
 });
 </script>
 
 <template>
-  <div
+  <RouterLink
+    :to="`/user/${path}`"
     class="w-full rounded-lg shadow-md p-2 flex flex-col items-center cursor-pointer"
   >
     <p class="text-xs font-semibold text-gray-600 my-1">{{ partaiName }}</p>
@@ -31,5 +35,5 @@ defineProps({
     >
       Ikuti
     </button>
-  </div>
+  </RouterLink>
 </template>
